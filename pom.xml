@@ -5,10 +5,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>edu.uwb</groupId>
-  <artifactId>hwloops_fileio</artifactId>
+  <artifactId>IntStack</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>hwloops_fileio</name>
+  <name>IntStack</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
