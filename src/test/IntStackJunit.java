@@ -9,7 +9,7 @@ public class IntStackJunit {
 
   @Test
     public void getCapacity() {
-      Assert.essertEquals(stack.getCapacity(), 10);
+      Assert.essertEquals(stack.getCapacity(), 0);
   }
 
     @Test
