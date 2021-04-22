@@ -1,6 +1,5 @@
-import org.junit.Assert;
+import static org.junit.Assert.*;
 import org.junit.Test;
-import org.junit.rules.ErrorCollector;
 
 import java.io.*;
 
@@ -9,18 +8,18 @@ public class IntStackJunit {
 
   @Test
     public void getCapacity() {
-      Assert.essertEquals(stack.getCapacity(), 0);
+      assertEquals(stack.getCapacity(), 0);
   }
 
     @Test
     public void checkLength() {
-        Assert.essertTtrue(stack.isEmpty());
+        essertTtrue(stack.isEmpty());
     }
 
     @Test
     public void checksetCapacity() {
         stack.setCapacity(3);
-        Assert.essertEquals(stack.getCapacity(), 3);
+        essertEquals(stack.getCapacity(), 3);
     }
 
 }
