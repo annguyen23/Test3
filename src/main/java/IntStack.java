@@ -6,7 +6,6 @@ public class IntStack{
     @param collection: Array represents the collection
     */
    public IntStack(int initialCapacity){
-
       collection=new int [initialCapacity];
    }
 
