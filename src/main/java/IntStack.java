@@ -1,3 +1,5 @@
+package Test3;
+
 public class IntStack{
    private int [] collection;
    private int elementNum = 0;
