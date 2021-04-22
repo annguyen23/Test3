@@ -19,7 +19,7 @@ public class IntStackJunit {
 
     @Test
     public void checksetCapacity() {
-        stack.setCapacity(3)
+        stack.setCapacity(3);
         Assert.essertEquals(stack.getCapacity(), 3);
     }
 
