@@ -1,19 +1,19 @@
 public class IntStack{
    private int [] collection;
-   private int elementNum=0;
+   private int elementNum = 0;
 
    /**create object IntStack
       @param collection: Array represents the collection
    */
    public IntStack(int initialCapacity){
-      collection=new int [initialCapacity];
+      collection = new int [initialCapacity];
    }
 
    /**create object IntStack with empty capacity
       @param collection: Array represents the collection
    */
    public IntStack (){
-      collection=new int [10];
+      collection = new int [10];
    }
 
    /**print out the result
@@ -23,15 +23,15 @@ public class IntStack{
       @return word: collection that will be displayed as String
    */
    public String toString(){
-      if (elementNum==0){
+      if (elementNum == 0){
          return "[]";
       }
-      String word="[";
-      for (int i=0;i<elementNum;i++){
-         if (i<elementNum-1){
-            word+=collection[i]+", ";
+      String word = "[";
+      for (int i = 0 ; i < elementNum; i++){
+         if (i < elementNum-1){
+            word += collection[i] + ", ";
          }else{
-            word+=collection[i]+"]";
+            word += collection[i] + "]";
          }
       }
       return word;
