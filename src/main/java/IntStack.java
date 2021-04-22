@@ -113,7 +113,7 @@ public class IntStack{
             tem[i] = collection[i];
          }
          collection = new int [newCapacity];
-         for (int i = 0; i<tem.length; i++){
+         for (int i = 0; i < tem.length; i++){
             collection[i] = tem[i];
          }
          return newCapacity;
