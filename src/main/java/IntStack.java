@@ -50,13 +50,13 @@ public class IntStack{
       @return true if collection is empty and false if collection is not
    */
    public boolean isEmpty(){
-      return elementNum==0;
+      return elementNum == 0;
    }
 
    /**set a warning to user
       @param WARNING: a warning as String when the collection is full
    */
-   public static final String WARNING="Push is unsuccessful!\nThe collection is full.";
+   public static final String WARNING = "Push is unsuccessful!\nThe collection is full.";
 
    /**push value in collection
       @param num: value that will be added
@@ -64,10 +64,10 @@ public class IntStack{
       @param collection: Array represents the collection
    */
    public void push(int num){
-      if (elementNum+1>collection.length){
+      if (elementNum+1 > collection.length){
          System.out.println(WARNING);
       }else{
-         collection[elementNum]=num;
+         collection[elementNum] = num;
          elementNum++;
       }
    }
@@ -79,13 +79,13 @@ public class IntStack{
       @return mostRecentNum: the most recent value as int
    */
    public int pop(){
-      if (elementNum==0){
+      if (elementNum == 0){
          System.out.println("Popping is falied!\nThis collection is empty!");
          return 0;
       }
       elementNum--;
-      int mostRecentNum=collection[elementNum];
-      collection[elementNum]=0;
+      int mostRecentNum = collection[elementNum];
+      collection[elementNum] = 0;
       return mostRecentNum;
    }
 
@@ -104,17 +104,17 @@ public class IntStack{
       @return newCapacity: new capacity of collection as String
    */
    public int setCapacity(int newCapacity){
-      if (newCapacity<collection.length){
+      if (newCapacity < collection.length){
          System.out.println("Setting new capacity is failed! New capacity is smaller than the old capacity!");
          return newCapacity;
       }else{
-         int[] tem= new int[collection.length];
-         for (int i=0;i<tem.length;i++){
-            tem[i]=collection[i];
+         int[] tem = new int[collection.length];
+         for (int i = 0; i < tem.length; i++){
+            tem[i] = collection[i];
          }
-         collection=new int [newCapacity];
-         for (int i=0;i<tem.length;i++){
-            collection[i]=tem[i];
+         collection = new int [newCapacity];
+         for (int i=0; i<tem.length; i++){
+            collection[i] = tem[i];
          }
          return newCapacity;
       }
