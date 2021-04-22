@@ -1,6 +1,6 @@
 public class IntStack{
    private int [] collection;
-   private int elementNum=0;
+   private int elementNum = 0;
    
    /**create object IntStack
       @param collection: Array represents the collection
