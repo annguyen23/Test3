@@ -108,7 +108,7 @@ public class IntStack{
          System.out.println("Setting new capacity is failed! New capacity is smaller than the old capacity!");
          return newCapacity;
       }else{
-         int[] tem = new int[collection.length];
+         int[] tem = new int [collection.length];
          for (int i = 0; i < tem.length; i++){
             tem[i] = collection[i];
          }
