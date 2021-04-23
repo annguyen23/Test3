@@ -2,7 +2,7 @@
 import static org.junit.Assert.*;
 import org.junit.Test;
 
-public class IntStackJunit {
+public class IntStackTests {
 
 
     @Test
