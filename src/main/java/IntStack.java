@@ -5,23 +5,19 @@ public class IntStack {
    private int elementNum = 0;
 
    /**create object IntStack
-      @param collection: Array represents the collection
+      @param initialCapacity: size of Array
    */
    public IntStack(int initialCapacity) {
       collection = new int [initialCapacity];
    }
 
    /**create object IntStack with empty capacity
-      @param collection: Array represents the collection
    */
    public IntStack () {
       collection = new int [10];
    }
 
    /**print out the result
-      @param word: String needs to be displayed
-      @param elementNum: length of collection
-      @param collection: Array represents the collection
       @return word: collection that will be displayed as String
    */
    public String toString() {
@@ -40,7 +36,6 @@ public class IntStack {
    }
 
    /**print out the lenghth of collection
-      @param elementNum: length of collection
       @return elementNum: length of collection as int.
    */
    public int getLength() {
@@ -48,7 +43,6 @@ public class IntStack {
    }
 
    /**check if the collection is empty
-      @param collection: Array represents the collection
       @return true if collection is empty and false if collection is not
    */
    public boolean isEmpty() {
@@ -56,14 +50,12 @@ public class IntStack {
    }
 
    /**set a warning to user
-      @param WARNING: a warning as String when the collection is full
+      WARNING: a warning as String when the collection is full
    */
    public static final String WARNING = "Push is unsuccessful!\nThe collection is full.";
 
    /**push value in collection
       @param num: value that will be added
-      @param elementNum: length of collection
-      @param collection: Array represents the collection
    */
    public void push(int num) {
       if (elementNum+1 > collection.length){
@@ -75,9 +67,6 @@ public class IntStack {
    }
 
    /**take out the most recent value and display it
-      @param mostRecentNum: the most recent value
-      @param elementNum: length of collection
-      @param collection: Array represents the collection
       @return mostRecentNum: the most recent value as int
    */
    public int pop() {
@@ -92,7 +81,6 @@ public class IntStack {
    }
 
    /**get capacity of collection
-      @param collection: Array represents the collection
       @return capacity of collection
    */
    public int getCapacity() {
@@ -101,8 +89,6 @@ public class IntStack {
 
    /**set capacity of collection
       @param newCapacity: new capacity of collection
-      @param collection: Array represents the collection
-      @param tem: temperary Array to store the collection
       @return newCapacity: new capacity of collection as String
    */
    public int setCapacity(int newCapacity) {
