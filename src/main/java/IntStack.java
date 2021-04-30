@@ -7,20 +7,20 @@ public class IntStack {
    /**create object IntStack
       @param initialCapacity: size of Array
    */
-   public IntStack(int initialCapacity) {
+   public IntStack (int initialCapacity) {
       collection = new int [initialCapacity];
    }
 
-   /**create object IntStack with empty capacity
+   /**create object IntStack with empty capacity.
    */
    public IntStack () {
-      collection = new int [10];
+      collection = new int[10];
    }
 
    /**print out the result
       @return word: collection that will be displayed as String
    */
-   public String toString() {
+   public String toString () {
       if (elementNum == 0){
          return "[]";
       }
@@ -38,14 +38,14 @@ public class IntStack {
    /**print out the lenghth of collection
       @return elementNum: length of collection as int.
    */
-   public int getLength() {
+   public int getLength () {
       return elementNum;
    }
 
    /**check if the collection is empty
       @return true if collection is empty and false if collection is not
    */
-   public boolean isEmpty() {
+   public boolean isEmpty () {
       return elementNum == 0;
    }
 
@@ -57,7 +57,7 @@ public class IntStack {
    /**push value in collection
       @param num: value that will be added
    */
-   public void push(int num) {
+   public void push (int num) {
       if (elementNum+1 > collection.length){
          System.out.println(WARNING);
       }else{
@@ -69,7 +69,7 @@ public class IntStack {
    /**take out the most recent value and display it
       @return mostRecentNum: the most recent value as int
    */
-   public int pop() {
+   public int pop () {
       if (elementNum == 0){
          System.out.println("Popping is falied!\nThis collection is empty!");
          return 0;
@@ -83,7 +83,7 @@ public class IntStack {
    /**get capacity of collection
       @return capacity of collection
    */
-   public int getCapacity() {
+   public int getCapacity () {
       return collection.length;
    }
 
@@ -91,7 +91,7 @@ public class IntStack {
       @param newCapacity: new capacity of collection
       @return newCapacity: new capacity of collection as String
    */
-   public int setCapacity(int newCapacity) {
+   public int setCapacity (int newCapacity) {
       if (newCapacity < collection.length){
          System.out.println("Setting new capacity is failed! New capacity is smaller than the old capacity!");
          return newCapacity;
