@@ -1,7 +1,7 @@
 
 
 public class IntStack {
-   private int [] collection;
+  private int [] collection;
    private int elementNum = 0;
 
    /**create object IntStack
