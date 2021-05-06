@@ -4,7 +4,6 @@ import org.junit.Test;
 
 public class IntStackTests {
 
-
     @Test
     public void getCapacity() {
         IntStack stack = new IntStack();
