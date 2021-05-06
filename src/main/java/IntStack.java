@@ -2,7 +2,7 @@ public class IntStack {
   private int[] collection;
   private int elementNum = 0;
 
-  /**create object IntStack
+  /**create object IntStack.
     @param initialCapacity size of Array
   */
   public IntStack(int initialCapacity) {
