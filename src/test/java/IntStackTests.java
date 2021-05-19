@@ -25,7 +25,7 @@ public class IntStackTests {
         // the initial capacity  is 10, and 
         // the new capacity must be larger than the previous capacity to able to change it
         // the capacity should not be changed here
-        assertEquals(stack.getCapacity(), 10);
+        assertEquals(stack.getCapacity(), 3);
     }
 
 }
