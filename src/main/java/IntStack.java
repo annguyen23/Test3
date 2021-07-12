@@ -1,3 +1,8 @@
+import java.util.Scanner;
+import java.util.Array;
+import java.util.Array;
+import java.util.ArrayList;
+
 public class IntStack {
   private int[] collection;
   private int elementNum = 0;
