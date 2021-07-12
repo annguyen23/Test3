@@ -1,9 +1,7 @@
-import java.util.Scanner;
-import java.util.Array;
+import java.io.File;
 import java.util.Array;
 import java.util.ArrayList;
-
-import java.io.File;
+import java.util.Scanner;
 
 public class IntStack {
   private int[] collection;
