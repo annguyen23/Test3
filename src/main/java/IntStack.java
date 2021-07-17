@@ -16,6 +16,8 @@ public class IntStack {
     IntStack i = new IntStack       ();
   }
   
+  public static void Abc() {}
+  
 
   /**create object IntStack.
     @param initialCapacity size of Array
