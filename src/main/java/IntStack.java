@@ -6,12 +6,21 @@ import java.util.Scanner;
 public class IntStack {
   private int[] collection;
   private int elementNum = 0;
+  
+  public static final int newnum = 0; //should have checkstyle warning
+  
+  public static void main(String[] args) {
+    int Num = 8; // checkstyle warning
+    int NUM = 8; // checkstyle warning
+    thils.toString   (); // checkstyle warning
+  }
+  
 
   /**create object IntStack.
     @param initialCapacity size of Array
   */
   public IntStack(int initialCapacity) {
-    collection = new int[initialCapacity];
+    collection = new int[initialCapacity];    
   }
 
   /**create object IntStack with empty capacity.
