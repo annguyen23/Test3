@@ -9,10 +9,11 @@ public class IntStack {
   
   public static final int newnum = 0; //should have checkstyle warning
   
-  public static void main(String[] args) {
+  public static void main(String[] args){
     int Num = 8; // checkstyle warning
     int NUM = 8; // checkstyle warning
     thils.toString   (); // checkstyle warning
+    IntStack i = new IntStack       ();
   }
   
 
