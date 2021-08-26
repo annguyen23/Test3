@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class IntStack {
-  private int[] collection;
+    private int[] collection;
   private int elementNum = 0;
   
   public static final int newnum = 0; //should have checkstyle warning
