@@ -29,6 +29,7 @@ jobs:
           reporter: github-check
           # Change reporter level if you need [info,warning,error].
           # GitHub Status Check won't become failure with a warning.
+          filter: diff_context
           level: warning
           workdir: src/main
 
