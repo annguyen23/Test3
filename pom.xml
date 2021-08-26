@@ -1,53 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+    <groupId>checkstyle-playground</groupId>
+    <artifactId>checkstyle-playground</artifactId>
+    <version>1.0-SNAPSHOT</version>
 
-  <groupId>edu.uwb</groupId>
-  <artifactId>IntStack</artifactId>
-  <version>1.0-SNAPSHOT</version>
-
-  <name>IntStack</name>
-
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.7</maven.compiler.source>
-    <maven.compiler.target>1.7</maven.compiler.target>
-  </properties>
-
-  <!-- can look up in https://mvnrepository.com/artifact/junit/junit/4.13.2 -->
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.11</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
-
-<build>
-     <plugin>
-       <groupId>org.apache.maven.plugins</groupId>
-       <artifactId>maven-checkstyle-plugin</artifactId>
-       <version>3.1.2</version>
-       <configuration>
-         <configLocation>checkstyle.xml</configLocation>
-         <encoding>UTF-8</encoding>
-         <consoleOutput>true</consoleOutput>
-         <failsOnError>true</failsOnError>
-         <linkXRef>false</linkXRef>
-       </configuration>
-       <executions>
-         <execution>
-           <id>validate</id>
-           <phase>validate</phase>
-           <goals>
-             <goal>check</goal>
-           </goals>
-         </execution>
-       </executions>
-     </plugin>
-</build>
-  
+    <build>
+        <plugins>
+            <!-- Java Compiler -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.2</version>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+            <!-- Check Java code style -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>2.17</version>
+                <!--
+                Force Maven to use latest version of checkstyle
+                -->
+                <dependencies>
+                    <dependency>
+                        <groupId>com.puppycrawl.tools</groupId>
+                        <artifactId>checkstyle</artifactId>
+                        <version>7.6</version>
+                    </dependency>
+                </dependencies>
+                <!--
+                Bind checkstyle to run as part of Maven validate phase
+                -->
+                <executions>
+                    <execution>
+                        <id>checkstyle</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <configLocation>checkstyle.xml</configLocation>
+                    <violationSeverity>info</violationSeverity>
+                    <logViolationsToConsole>true</logViolationsToConsole>
+                    <failOnViolation>true</failOnViolation>
+                    <consoleOutput>true</consoleOutput>
+                    <linkXRef>false</linkXRef>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
