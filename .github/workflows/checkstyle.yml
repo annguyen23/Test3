@@ -42,8 +42,6 @@ jobs:
           repository: ${{ env.parent_repo }}
           github_token: ${{ secrets.github_token }}
       - uses: actions/checkout@v2
-      - name: mvn site
-        run:  mvn site
       - name: mvn checkstyle
         run:  mvn checkstyle:checkstyle
       - name: Publish Test Report
