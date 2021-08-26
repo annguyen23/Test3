@@ -59,7 +59,14 @@
     </pluginManagement>
   </build>
   
-  <module name="Indentation">
-      <property name="lineWrappingIndentation" value="0"/>
+<module name="Checker">
+<property name="severity" value="warning" />
+  <module name="TreeWalker">
+    <module name="Indentation">
+      <property name="basicOffset" value="4" />
+      <property name="braceAdjustment" value="0" />
+    </module>
   </module>
+</module>
+  
 </project>
