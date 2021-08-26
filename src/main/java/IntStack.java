@@ -7,7 +7,7 @@ public class IntStack {
     private int[] collection;
     private int elementNum = 0;
   
-  public static final int newnum = 0; //should have checkstyle warning
+    public static final int newnum = 0; //should have checkstyle warning
   
   public static void main(String[] args){
     int Num = 8; // checkstyle warning
