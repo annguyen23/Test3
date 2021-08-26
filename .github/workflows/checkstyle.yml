@@ -40,7 +40,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           repository: ${{ env.parent_repo }}
-          token: ${{ secrets.TOKEN }}
+          github_token: ${{ secrets.github_token }}
       - uses: actions/checkout@v2
       - name: mvn site
         run:  mvn site
