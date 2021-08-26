@@ -58,4 +58,8 @@
       </plugins>
     </pluginManagement>
   </build>
+  
+  <module name="Indentation">
+      <property name="lineWrappingIndentation" value="0"/>
+  </module>
 </project>
