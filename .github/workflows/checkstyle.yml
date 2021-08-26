@@ -31,21 +31,4 @@ jobs:
           # GitHub Status Check won't become failure with a warning.
           level: warning
           #workdir: src/main
-  build:
-    # The type of runner that the job will run on
-    name: Build Step
-    runs-on: ubuntu-latest
-   
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          repository: ${{ env.parent_repo }}
-          github_token: ${{ secrets.github_token }}
-      - uses: actions/checkout@v2
-      - name: mvn checkstyle
-        run:  mvn checkstyle:checkstyle
-      - name: Publish Test Report
-        if: ${{ always() }}
-        uses: scacap/action-surefire-report@v1
-        with:
-          name: Compile-Run-Report
+
