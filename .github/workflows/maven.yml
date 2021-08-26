@@ -46,4 +46,9 @@ jobs:
         with:
           java-version: 1.8
       - name: Build with Maven
-        run:  java -jar checkstyle-8.45-all.jar -c checkstyle.xml *.java
+        run:  mvn clean compile test --batch-mode --fail-at-end
+      - name: Publish Test Report
+        if: ${{ always() }}
+        uses: scacap/action-surefire-report@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
