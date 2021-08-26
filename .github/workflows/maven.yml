@@ -31,7 +31,7 @@ jobs:
           # GitHub Status Check won't become failure with a warning.
           filter_mode: added
           level: warning
-          path: 'checkstyle.xml'
+          checkstyle_config: 'checkstyle.xml'
           workdir: src
           
   build:
